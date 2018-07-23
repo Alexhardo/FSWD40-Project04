@@ -35,10 +35,7 @@
         </a>
         <hr>
     </div>
-    <!-- clock images and icons -->
-    <section id="main" class="row"></section>
-    <!-- about section -->
-    <section class="row" id="about"></section>
+  
     <!-- final and footer -->
     <footer></footer>
     </div>
