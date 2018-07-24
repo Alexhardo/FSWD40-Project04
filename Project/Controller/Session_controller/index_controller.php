@@ -61,8 +61,12 @@ if (isset($_POST['btn_login'])) { //If login button was pushed
 				//Redirect a user to corresponding dashboard page
 				if (isset($_SESSION['rights']) && $_SESSION['rights'] == 'student') {
 					header("Location: ../../View/student_page.php");	
+				} elseif (isset($_SESSION['rights']) && $_SESSION['rights'] == 'admin') {
+					header("Location: admin_dashboard_controller.php");
 				} else {
-					echo 'User is not a student!';
+					echo 'User is not a student and not an admin!';
+					var_dump($_SESSION['rights']);
+					die;
 				}
 			} else { //If passwords not match
 				echo 'Password is wrong!<br>';
