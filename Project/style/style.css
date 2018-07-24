@@ -169,4 +169,13 @@ main .container-fluid {
   margin-bottom: 20px;
   text-align: center; }
 
+.ticket-topic {
+  position: absolute;
+  top: 13px;
+  right: 27%;
+  border: 2px solid #4700ff;
+  padding: 4px 30px;
+  border-radius: 8px;
+  background-color: #ffffff; }
+
 /*# sourceMappingURL=style.css.map */
