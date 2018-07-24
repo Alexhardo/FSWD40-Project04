@@ -1,0 +1,38 @@
+.profile-widget {
+    background-color:#6C4CBF;
+    width: 300px;
+    height: 300px;
+    border-radius: 7px;
+    position: relative;
+    box-shadow: -1px 10px 52px -8px rgba(107,107,107,1);
+
+    .profile-widget-text {
+        position: absolute;
+        width: 100%;
+        background-color: white;
+        height: 55%;
+        border: 2px solid #6C4CBF;
+        bottom: 0;
+        border-radius: 0 0 7px 7px;
+        p {
+            margin: 0px;
+            &:nth-child(1) {
+            margin-top: 40px;
+            margin-left: 30px;
+            }
+            &:nth-child(2) {
+                margin-left: 30px;
+            }
+        }
+    }
+    .profile-widget-avatar {
+        z-index: 1;
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        position: absolute;
+        left: calc(50% - 45px);
+        top: 74px;
+        background-color: gray;
+    }
+}
