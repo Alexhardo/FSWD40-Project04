@@ -7,9 +7,9 @@
     </div>
 </footer>    
 
-    <script src="../js/jquery/jquery.js"></script>
-    <script src="../js/popperjs/popper.js"></script>
-    <script src="../js/jquery/jquery-ui.min.js"></script>
-    <script src="../js/bootstrap/bootstrap.js"></script>
+    <script src="../../js/jquery/jquery.js"></script>
+    <script src="../../js/popperjs/popper.js"></script>
+    <script src="../../js/jquery/jquery-ui.min.js"></script>
+    <script src="../../js/bootstrap/bootstrap.js"></script>
 </body>
 </html>

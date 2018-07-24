@@ -2,11 +2,9 @@
 @import 'partials/ticket_author';
 @import 'partials/profile_widget';
 @import 'partials/teachers_widget';
+@import 'partials/login';
 @import 'partials/footer';
 
-body {
-    position: relative;
-}
 
 main {
     .container-fluid{
@@ -14,4 +12,8 @@ main {
     }
 }
 
+.fontw100 {
+    margin-top: 70px;
+    font-weight: 200;
+}
 
