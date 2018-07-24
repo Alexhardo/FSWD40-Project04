@@ -9,12 +9,12 @@
             <form method="POST" action="index_controller.php">
                 <h4 class="text-center">Sign in</h4>
                 <div class="form-group">
-                    <label for="inputEmail">email</label>
-                    <input type="email" class="form-control" name="inputEmail" placeholder="john@doe.com">            
+                    <label for="email">email</label>
+                    <input type="email" class="form-control" name="email" placeholder="john@doe.com">            
                 </div>
                 <div class="form-group">
-                    <label for="password">password</label>
-                    <input type="password" class="form-control" name="password" placeholder="Password">
+                    <label for="pass">password</label>
+                    <input type="password" class="form-control" name="pass" placeholder="Password">
                 </div>
                 <button type="submit" class="btn btn-light" name="btn_login">Sign in</button>
             </form>
