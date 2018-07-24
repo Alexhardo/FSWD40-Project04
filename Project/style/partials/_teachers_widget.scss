@@ -1,0 +1,16 @@
+.teachers-widget {
+    color: white;
+    width: 300px;
+    height: 500px;
+    background-color: #6c4cbf;
+    margin-top: 50px;
+    border-radius: 8px;
+    box-shadow: -1px 10px 52px -8px rgba(107,107,107,1);
+    .teachers-widget-avatar {
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        background-color: grey;
+        
+    }
+}

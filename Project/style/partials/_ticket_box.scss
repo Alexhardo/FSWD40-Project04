@@ -1,0 +1,82 @@
+.ticket-box {
+    background-color: #6C4CBF;
+    border-radius: 9px;
+    width: 40%;
+    padding: 0px;
+    height: 100%;
+    margin-bottom: 60px;
+    
+    .green-label{
+        width: 57px;
+        height: 10px;
+        background-color: #1dce1d;
+        z-index: 0;
+        position: absolute;
+        top: -10px;
+        border-radius: 5px 5px 0 0;
+        left: 54px;
+    }
+    .orange-label{
+        width: 57px;
+        height: 10px;
+        background-color: #ffc722;
+        z-index: 0;
+        position: absolute;
+        top: -10px;
+        border-radius: 5px 5px 0 0;
+        left: 54px;
+    }
+    .ticket-date {
+        margin: 0;
+        position: absolute;
+        bottom: -25px;
+        right: 20px;
+        font-weight: 100;
+        opacity: 0.8;
+    }
+    .ticket-title {
+        margin: 0;
+        padding: 18px;
+        color: white;
+    }
+    position: relative;
+    button.expand-ticket {
+        cursor: pointer;
+        border: none;
+        outline: none;
+        text-align: left;
+        background-color: transparent;
+        color: #fff;
+        position: absolute;
+        padding: 0px;
+        border-radius: 4px;
+        top: 8px;
+        font-size: 30px;
+        right: 3%;
+        transition: 0.3s;
+        .rotate-button {
+            transform: rotate(180deg);
+        }
+    }
+    .panel {
+        margin-left: 30px;
+        background-color: #fff;
+        color:#000;
+        border-radius:0 0 9px 9px;
+        overflow:hidden;
+        opacity:0;
+        max-height:0;
+        transition:0.3s;
+        padding:0 8px;
+        margin:0;
+        p {
+            padding: 5px;
+        }
+    }
+    div.panel.show{   
+            opacity:1 !important;
+            max-height:2200px !important;
+            padding:8px;
+            box-shadow: -1px 10px 52px -8px rgba(107,107,107,1);
+    }
+}
