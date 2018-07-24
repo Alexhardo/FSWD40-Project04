@@ -48,8 +48,6 @@
     font-size: 30px;
     right: 3%;
     transition: 0.3s; }
-    .ticket-box button.expand-ticket .rotate-button {
-      transform: rotate(180deg); }
   .ticket-box .panel {
     margin-left: 30px;
     background-color: #fff;
@@ -68,6 +66,9 @@
     max-height: 2200px !important;
     padding: 8px;
     box-shadow: -1px 10px 52px -8px #6b6b6b; }
+
+.rotate-button {
+  transform: rotate(180deg) !important; }
 
 .ticket-author {
   margin-left: 3%; }
@@ -93,11 +94,10 @@
     border-radius: 0 0 7px 7px;
     text-align: start; }
     .profile-widget .profile-widget-text p {
-      margin: 0px; }
+      margin: 0px;
+      margin-left: 30px; }
       .profile-widget .profile-widget-text p:nth-child(1) {
         margin-top: 40px;
-        margin-left: 30px; }
-      .profile-widget .profile-widget-text p:nth-child(2) {
         margin-left: 30px; }
   .profile-widget .profile-widget-avatar {
     z-index: 1;
