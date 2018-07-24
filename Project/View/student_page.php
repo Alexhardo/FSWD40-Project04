@@ -3,11 +3,11 @@
 <main>
     <div class="container-fluid mt-5">
         <div class="row">
-            <div class="left-inner-container col-lg-9">
+            <div class="left-inner-container col-md-9 col-sm-12">
                 <div class="ticket-container">
                 </div>
             </div>
-            <div class="right-inner-container col-lg-3">
+            <div class="right-inner-container col-md-3 col-sm-12">
                 <div class="profile-widget">
                     <div class="profile-widget-avatar"></div>
                     <div class="profile-widget-text">
@@ -23,6 +23,7 @@
                     <div class="teachers-widget-avatar"></div>
                     <p>Teacher Z</p>
                 </div>
+            </div>
         </div>
     </div>
 </main>
