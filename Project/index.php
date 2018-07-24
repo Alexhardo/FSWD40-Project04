@@ -35,10 +35,9 @@
         </a>
         <hr>
     </div>
-  
+    <p>Hello, <?php $email ?>!</p>
     <!-- final and footer -->
     <footer></footer>
-    </div>
 </body>
 
 </html>
