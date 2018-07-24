@@ -1,17 +1,35 @@
-@import 'partials/ticket_box';
-@import 'partials/ticket_author';
-@import 'partials/profile_widget';
-@import 'partials/teachers_widget';
-@import 'partials/footer';
-
-body {
-    position: relative;
-}
-
-main {
-    .container-fluid{
-        margin-bottom: 200px;
+    @import 'partials/ticket_box';
+    @import 'partials/ticket_author';
+    @import 'partials/profile_widget';
+    @import 'partials/teachers_widget';
+    @import 'partials/footer';
+    body {
+        position: relative;
     }
-}
-
-
+    
+    main {
+        .container-fluid {
+            margin-bottom: 200px;
+        }
+    }
+    
+    #adminMAin {
+        thead {
+            background-color: #453184 !important;
+            color: white;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        .col-sm-12,
+        .col-xs-12 {
+            padding: 0 10px
+        }
+        div {
+            margin-top: 20px;
+        }
+        #adminstat {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    }

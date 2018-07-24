@@ -90,7 +90,8 @@
     height: 55%;
     border: 2px solid #6C4CBF;
     bottom: 0;
-    border-radius: 0 0 7px 7px; }
+    border-radius: 0 0 7px 7px;
+    text-align: start; }
     .profile-widget .profile-widget-text p {
       margin: 0px; }
       .profile-widget .profile-widget-text p:nth-child(1) {
@@ -122,6 +123,7 @@
     background-color: grey; }
 
 .footer {
+  text-align: center;
   position: absolute;
   height: 130px;
   width: 100%;
@@ -130,11 +132,28 @@
   .footer h4 {
     margin-top: 30px;
     font-weight: 100; }
+  .footer i {
+    font-size: 2em;
+    margin: 0 .3em; }
 
 body {
   position: relative; }
 
 main .container-fluid {
   margin-bottom: 200px; }
+
+#adminMAin thead {
+  background-color: #453184 !important;
+  color: white; }
+#adminMAin h2 {
+  margin-bottom: 20px; }
+#adminMAin .col-sm-12,
+#adminMAin .col-xs-12 {
+  padding: 0 10px; }
+#adminMAin div {
+  margin-top: 20px; }
+#adminMAin #adminstat {
+  margin-bottom: 20px;
+  text-align: center; }
 
 /*# sourceMappingURL=style.css.map */
