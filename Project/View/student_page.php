@@ -3,11 +3,10 @@
 <main>
     <div class="container-fluid mt-5">
         <div class="row">
-            <div class="left-inner-container col-lg-9">
-                <div class="ticket-container">
-                </div>
+            <div class="left-inner-container col-lg-9 col-md-9 col-sm-9">
+                <div class="ticket-container"></div>
             </div>
-            <div class="right-inner-container col-lg-3">
+            <div class="right-inner-container col-lg-3 col-md-3">
                 <div class="profile-widget">
                     <div class="profile-widget-avatar"></div>
                     <div class="profile-widget-text">
