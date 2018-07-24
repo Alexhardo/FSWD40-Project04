@@ -16,4 +16,25 @@ main {
     margin-top: 70px;
     font-weight: 200;
 }
+    
+#adminMAin {
+    thead {
+        background-color: #453184 !important;
+        color: white;
+    }
+    h2 {
+        margin-bottom: 20px;
+    }
+    .col-sm-12,
+    .col-xs-12 {
+        padding: 0 10px
+    }
+    div {
+        margin-top: 20px;
+    }
+    #adminstat {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}
 

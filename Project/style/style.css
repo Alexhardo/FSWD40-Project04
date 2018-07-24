@@ -90,7 +90,8 @@
     height: 55%;
     border: 2px solid #6C4CBF;
     bottom: 0;
-    border-radius: 0 0 7px 7px; }
+    border-radius: 0 0 7px 7px;
+    text-align: start; }
     .profile-widget .profile-widget-text p {
       margin: 0px; }
       .profile-widget .profile-widget-text p:nth-child(1) {
@@ -143,6 +144,9 @@
   .footer h4 {
     margin-top: 30px;
     font-weight: 100; }
+  .footer i {
+    font-size: 2em;
+    margin: 0 .3em; }
 
 main .container-fluid {
   margin-bottom: 200px; }
@@ -150,5 +154,19 @@ main .container-fluid {
 .fontw100 {
   margin-top: 70px;
   font-weight: 200; }
+
+#adminMAin thead {
+  background-color: #453184 !important;
+  color: white; }
+#adminMAin h2 {
+  margin-bottom: 20px; }
+#adminMAin .col-sm-12,
+#adminMAin .col-xs-12 {
+  padding: 0 10px; }
+#adminMAin div {
+  margin-top: 20px; }
+#adminMAin #adminstat {
+  margin-bottom: 20px;
+  text-align: center; }
 
 /*# sourceMappingURL=style.css.map */
