@@ -6,7 +6,7 @@ $.getJSON("../js/dummy_data.json", (data) => {
 for (let i = 0; i < items.length; i++) {
     $(`.ticket-container:eq(${0})`).append(`
     <div class="row">
-            <div class="ticket-box col-lg-6 offset-lg-3">
+            <div class="ticket-box col-lg-6 col-md-6 col-sm-9 col-9 offset-lg-3 offset-md-3">
                 <div class="green-label"></div>
                 <div class="orange-label"></div>
                 <p class="ticket-date">Posted 45 minutes ago.</p>

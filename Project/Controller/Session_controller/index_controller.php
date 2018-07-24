@@ -9,11 +9,7 @@ session_start();
 session_unset();
 session_destroy();*/
 
-//If user is already ligged in, redirect to big_list_boot.php
-if(isset($_SESSION['user'])) {
-	header('Location: ../../index.php');
-	exit;
-}
+// @todo Include redirect for a logged in user
 
 /*
 *Attemt to login user
@@ -26,7 +22,7 @@ require_once('../../Model/index_model.php');
 checkConnection(); //My function defined in model.php
 
 if (isset($_POST['btn_login'])) { //If login button was pushed
-	list($email, $pass) = getEmailPass($_POST['email'], $_POST['pass']); //My functioin defined in model.php
+	list($email, $pass) = getEmailPass($_POST['email'], $_POST['pass']); //My function defined in model.php
 
 	//Check email input
 	if (empty($email)) {
@@ -56,7 +52,18 @@ if (isset($_POST['btn_login'])) { //If login button was pushed
 		if (!$error) {
 			if ($count == 1 && $row[0]['pass'] == $pass) {//Single user found and passwords match
 				$_SESSION['user'] = $row[0]['user_id'];
-				header("Location: big_list_boot.php");
+				
+				$rights = getUserRights($email);
+				//var_dump($rights);
+				//die;
+				$_SESSION['rights'] = $rights;
+
+				//Redirect a user to corresponding dashboard page
+				if (isset($_SESSION['rights']) && $_SESSION['rights'] == 'student') {
+					header("Location: ../../View/student_page.php");	
+				} else {
+					echo 'User is not a student!';
+				}
 			} else { //If passwords not match
 				echo 'Password is wrong!<br>';
 				/*var_dump($count);
@@ -74,5 +81,5 @@ if (isset($_POST['btn_login'])) { //If login button was pushed
 	}
 }
 
-//Display HTML page
+//Display log in page
 require_once('../../View/index_view.php');
