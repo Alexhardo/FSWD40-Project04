@@ -15,7 +15,7 @@
           </li>
           <!-- Logout should be present only when user logged in. -->
           <li class="nav-item">        
-            <a class="nav-link" href="#">Logout</a>
+            <a class="nav-link" href="../Controller/Session_controller/logOut_controller.php?logout=1">Logout</a>
           </li>
         </ul>
       </div>

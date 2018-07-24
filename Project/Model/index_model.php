@@ -68,4 +68,50 @@ function checkUser (&$email, &$error, &$errorMsg) {
 	}
 }
 
+function getUserRights($email) {
+	$mysqli = openConnection ('localhost', 'root', '', 'help_ticket');
+	//showConnectionStatus($mysqli);
+	$sql = "SELECT rights
+						FROM users
+						WHERE email = '$email'";
+	$result = queryDatabase($mysqli, $sql);
+	//$count = 0;
 
+	$row = fetchAllRows($result);
+
+	return $row[0]['rights'];
+
+	/*if (is_object($result)) { //Result has to have something
+		$count = countRows($result);
+		if($count != 0) {
+			$row = fetchAllRows($result);
+			closeConnection($mysqli);
+			//Clear variables
+			if (isset($result)) {
+				$result->free();
+			}
+			return array($count, $row);
+			//var_dump($row[0]['pass']);
+		} else { //If more than one record in DB for such an email found
+			$error = true;
+			closeConnection($mysqli);
+			//Clear variables
+			if (isset($result)) {
+				$result->free();
+			}
+			$error = true;
+			$errorMsg .= ' User with such email was not found!';
+			return array(null, null);
+		}
+	} else {
+		$error = true;
+		closeConnection($mysqli);
+		//Clear variables
+		if (isset($result)) {
+			$result->free();
+		}
+		$error = true;
+		$errorMsg .= ' User with such email was not found!';
+		return array(null, null);
+	}*/
+}

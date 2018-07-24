@@ -1,6 +1,8 @@
 <?php include "inc/head.php" ?>
 <?php include 'inc/navbar.php' ?>
 <main>
+    <?php var_dump($_SESSION['rights']); ?>
+
     <div class="container-fluid mt-5">
         <div class="row">
             <div class="left-inner-container col-lg-9">
