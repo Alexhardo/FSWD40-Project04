@@ -1,7 +1,6 @@
 .ticket-box {
     background-color: #6C4CBF;
     border-radius: 9px;
-    // width: 40%;
     padding: 0px;
     height: 100%;
     margin-bottom: 60px;
@@ -54,9 +53,7 @@
         font-size: 30px;
         right: 3%;
         transition: 0.3s;
-        .rotate-button {
-            transform: rotate(180deg);
-        }
+        
     }
     .panel {
         margin-left: 30px;
@@ -79,4 +76,7 @@
             padding:8px;
             box-shadow: -1px 10px 52px -8px rgba(107,107,107,1);
     }
+}
+.rotate-button {
+    transform: rotate(180deg)!important;
 }

@@ -1,11 +1,3 @@
-let items = [];
-console.log(tempData);
-// $.getJSON(tempData, (data) => {
-//         $.each(data, (key, val) => {
-//                 items.push(val)
-//                 console.log(items)
-//                 console.log('tst')
-//             })
 for (let i = 0; i < tempData.length; i++) {
     $(`.ticket-container:eq(${0})`).append(`
     <div class="row">
@@ -18,6 +10,10 @@ for (let i = 0; i < tempData.length; i++) {
                 <button class="expand-ticket"><i class="fas fa-angle-double-down down"></i></button>
                 <div class="panel">
                     <p><strong>Description: </strong><br>${tempData[i].description}</p>
+                    <div class="row">
+                    <button class="btn btn-warning col-lg-3 offset-lg-5">Take the ticket</button>
+                    <button class="btn btn-success col-lg-3 ml-2">Close the ticket</button>
+                    </div>
                 </div>
             </div>
             <div class="ticket-author col-lg-1 col-md-1 col-sm-1 col-1">
@@ -35,5 +31,3 @@ accordions[i].onclick = function() {
     $(this).toggleClass("rotate-button");
 };
 }
-// })
-

@@ -1,7 +1,6 @@
 <?php include "inc/head.php" ?>
 <?php include 'inc/navbar.php' ?>
 <main>
-
     <div class="container-fluid mt-5">
         <div class="row">
             <div class="left-inner-container col-lg-9 col-md-9 col-sm-9">
@@ -11,18 +10,12 @@
                 <div class="profile-widget">
                     <div class="profile-widget-avatar"></div>
                     <div class="profile-widget-text">
-                        <p>John doe</p>
-                        <p>Tickets asked: 13</p>
+                        <p>Teacher X</p>
+                        <p>Number of students: 15</p>
+                        <p>Number of opened tickets: 34</p>
                     </div>
                 </div>
-                <div class="teachers-widget d-flex flex-column justify-content-around align-items-center">
-                    <div class="teachers-widget-avatar"></div>
-                    <p>Teacher X</p>
-                    <div class="teachers-widget-avatar"></div>
-                    <p>Teacher Y</p>
-                    <div class="teachers-widget-avatar"></div>
-                    <p>Teacher Z</p>
-                </div>
+                <button class="btn btn-light mt-5 ml-5" style="border: 1px solid #7634C4;">Register a new student</button>
             </div>
         </div>
     </div>
@@ -31,4 +24,4 @@
 <script>
     <?php echo "let tempData = ". $tickets . ";\n";?>
 </script>
-<script src="../../js/student_view.js"></script>
+<script src="../../js/teacher_view.js"></script>

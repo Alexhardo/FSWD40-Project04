@@ -60,7 +60,7 @@ if (isset($_POST['btn_login'])) { //If login button was pushed
 
 				//Redirect a user to corresponding dashboard page
 				if (isset($_SESSION['rights']) && $_SESSION['rights'] == 'student') {
-					header("Location: ../../View/student_page.php");	
+					header("Location: ../Ticket_controller/student_ticket_controller.php");	
 				} elseif (isset($_SESSION['rights']) && $_SESSION['rights'] == 'admin') {
 					header("Location: admin_dashboard_controller.php");
 				} else {
