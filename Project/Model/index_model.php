@@ -1,7 +1,8 @@
 <?php
 
 //Functions to work with mySQL (mySQL-specific data access layer)
-require_once('../../Config/mySQL_functions.php');
+
+require_once(__DIR__ . '\..\Config\mySQL_functions.php');
 
 function checkConnection () {
 	$mysqli = openConnection ('localhost', 'root', '', 'help_ticket');
