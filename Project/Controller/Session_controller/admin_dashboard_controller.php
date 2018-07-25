@@ -20,8 +20,8 @@ require_once('../../Model/admin_dashboard_model.php');
 
 checkConnection(); //My function defined in model.php
 
-$coursesJson = getAllTableContent('courses');;
-$ticketsJson = getAllTableContent('tickets');
+$coursesJson = getAllTableContent('courses');
+$ticketsJson = getAllTickets();
 $usersJson = getAllTableContent('users');
 
 //Show page
