@@ -5,7 +5,7 @@
 require_once('../../Config/mySQL_functions.php');
 
 function checkConnection () {
-	$mysqli = openConnection ('localhost', 'root', 'root', 'help_ticket');
+	$mysqli = openConnection ('localhost', 'root', '', 'help_ticket');
 	showConnectionStatus($mysqli);
 	closeConnection($mysqli);
 }
@@ -14,7 +14,7 @@ function getEmailPass($emailPost, $passPost) {
 	/*
 	*Escape string for email and pass input
 	*/
-	$mysqli = openConnection ('localhost', 'root', 'root', 'help_ticket');
+	$mysqli = openConnection ('localhost', 'root', '', 'help_ticket');
 	//showConnectionStatus($mysqli);
 	$email = escapeString ($mysqli, $emailPost); //My function defined in mySQL_functions.php
 	$pass = escapeString ($mysqli, $passPost);
@@ -26,7 +26,7 @@ function checkUser (&$email, &$error, &$errorMsg) {
 	/*
 	*Check that there is a user with such email
 	*/
-	$mysqli = openConnection ('localhost', 'root', 'root', 'help_ticket');
+	$mysqli = openConnection ('localhost', 'root', '', 'help_ticket');
 	//showConnectionStatus($mysqli);
 	$sql = "SELECT user_id, email, pass
 						FROM users
@@ -70,7 +70,7 @@ function checkUser (&$email, &$error, &$errorMsg) {
 }
 
 function getUserRights($email) {
-	$mysqli = openConnection ('localhost', 'root', 'root', 'help_ticket');
+	$mysqli = openConnection ('localhost', 'root', '', 'help_ticket');
 	//showConnectionStatus($mysqli);
 	$sql = "SELECT rights
 						FROM users
