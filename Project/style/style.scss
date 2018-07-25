@@ -47,3 +47,24 @@ main {
     border-radius: 8px;
     background-color: #ffffff;
 }
+a:hover{
+    text-decoration: none;
+    color:red;
+}
+.buttonDepth {
+    // width: 200px;
+    font-size: 16px;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 4px;
+    background: rgba(#6E4DC0, 1);
+    padding: 15px 20px;
+    transition: all .5s ease;
+    border-radius: 3px;
+}
+
+.is-active {
+    box-shadow: 0 20px 5px -10px rgba(#000, 0.4);
+    transform: translateY(10px);
+}
