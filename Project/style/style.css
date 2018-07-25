@@ -34,7 +34,8 @@
     margin: 0;
     max-width: 60%;
     padding: 18px;
-    color: white; }
+    color: white;
+    max-width: 48%; }
   .ticket-box button.expand-ticket {
     cursor: pointer;
     border: none;

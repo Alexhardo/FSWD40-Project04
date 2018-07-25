@@ -4,6 +4,6 @@
 <p><input placeholder="last name" type="text" name="last_name"></p>
 <p><input placeholder="e-mail" type="text" name="email"></p>
 <p><input placeholder="password" type="text" name="pass"></p>
-<p><input name="rights" type="text" style="display:none"></p>
+<p><input name="rights" type="hidden" value="student"></p>
 <p><button type="submit">register</button></p>
 </form>
