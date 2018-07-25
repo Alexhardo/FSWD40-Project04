@@ -51,6 +51,17 @@ function getAllTickets() {
 	return $ticketsJson;
 }
 
-function getStudents () {
+function getCurrentUserData ($userId) {
+	$mysqli = openConnection (DBHOST, DBUSER, DBPASS, DBNAME);
 
+	$sql ="SELECT * FROM users
+				 WHERE user_id = $userId";
+
+	$result = queryDatabase($mysqli, $sql);
+	$resultArray = fetchAllRows($result);
+	$userJson = json_encode($resultArray);
+	closeConnection($mysqli);
+	//var_dump($resultArray);
+
+	return $userJson;
 }
