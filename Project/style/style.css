@@ -180,4 +180,23 @@ main .container-fluid {
   border-radius: 8px;
   background-color: #ffffff; }
 
+a:hover {
+  text-decoration: none;
+  color: red; }
+
+.buttonDepth {
+  font-size: 16px;
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 4px;
+  background: #6e4dc0;
+  padding: 15px 20px;
+  transition: all .5s ease;
+  border-radius: 3px; }
+
+.is-active {
+  box-shadow: 0 20px 5px -10px rgba(0, 0, 0, 0.4);
+  transform: translateY(10px); }
+
 /*# sourceMappingURL=style.css.map */
