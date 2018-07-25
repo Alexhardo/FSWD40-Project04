@@ -26,8 +26,7 @@ $usersJson = getAllTableContent('users');
 
 $userId = $_SESSION['user'];
 $currentUserJson = getCurrentUserData($userId);
-echo "Current user data: <br>";
-echo $currentUserJson;
+
 
 //Show page
 require_once('../../View/admin_page.php');

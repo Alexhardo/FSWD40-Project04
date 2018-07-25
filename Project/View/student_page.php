@@ -11,10 +11,7 @@
             <div class="right-inner-container col-lg-3 col-md-3">
                 <div class="profile-widget">
                     <div class="profile-widget-avatar"></div>
-                    <div class="profile-widget-text">
-                        <p>John doe</p>
-                        <p>Tickets asked: 13</p>
-                    </div>
+                    <div class="profile-widget-text"></div>
                 </div>
                 <div class="teachers-widget d-flex flex-column justify-content-around align-items-center">
                     <div class="teachers-widget-avatar"></div>

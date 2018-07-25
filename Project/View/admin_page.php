@@ -25,10 +25,7 @@
     <div id="adminInfo" class="col-md-3 col-sm-12">
         <div class="profile-widget">
              <div class="profile-widget-avatar"></div>
-            <div class="profile-widget-text">
-                <p>John doe</p>
-                <p>Tickets asked: 13</p>
-            </div>
+            <div class="profile-widget-text"></div>
         </div>
     </div>
 </div>
@@ -97,6 +94,6 @@
     <?php echo "let courses = ". $coursesJson . ";\n";?>
     <?php echo "let tickets = ". $ticketsJson . ";\n";?>
     <?php echo "let users = ". $usersJson . ";\n";?>
-
+    <?php echo "let current_User = ". $currentUserJson . ";\n";?>
 </script>
 <script src="../../js/admin_view.js"></script>

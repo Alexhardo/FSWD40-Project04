@@ -1,3 +1,10 @@
+console.log(current_User);
+
+for (let i = 0; i < current_User.length; i++) {
+  $('.profile-widget-text:eq(0)').append(`
+    <p>${current_User[i].first_name} ${current_User[i].last_name}</p>
+  `)
+}
 
 for (let i = 0; i < courses.length; i++) {
     $(`#Courses:eq(${0})`).append(`
