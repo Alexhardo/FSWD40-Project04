@@ -33,3 +33,7 @@ function countRows ($result) {
 function fetchAllRows ($result) {
 	return $result->fetch_all(MYSQLI_ASSOC);
 }
+
+function insertDatabase ($mysqli, $sql) {
+	return $mysqli->real_query($sql);
+}
