@@ -2,7 +2,7 @@
 //DB connetion parameters
 DEFINE('DBHOST', 'localhost');
 DEFINE('DBUSER', 'root');
-DEFINE('DBPASS', '');
+DEFINE('DBPASS', 'root');
 DEFINE('DBNAME', 'help_ticket');
 
 //Functions to work with mySQL (mySQL-specific data access layer)

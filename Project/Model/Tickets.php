@@ -3,7 +3,7 @@
 
 
  function getTicketJson()
-   {$mysqli = openConnection ('localhost', 'root', '', 'help_ticket');   
+   {$mysqli = openConnection ('localhost', 'root', 'root', 'help_ticket');   
    $sql = "SELECT *,users.last_name,users.first_name from tickets inner join users on tickets.fk_student_id=users.user_id inner join topics on tickets.fk_topic_id = topics.topic_id";
    $result = queryDatabase($mysqli, $sql);
 
