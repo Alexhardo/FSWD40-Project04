@@ -8,7 +8,7 @@
    $sql="update tickets set ticket_status='".$ticketStatus."' where ticket_id='".$ticketId."'";
    $result = queryDatabase($mysqli, $sql);
    if($result)
-    {echo 'ticket status updated';}
+    header('Location: ../Ticket_controller/teacher_ticket_controller.php');
    else
     {echo 'error! ticket status could not be updated';}
   }
