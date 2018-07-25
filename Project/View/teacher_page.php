@@ -15,7 +15,8 @@
                         <p>Number of opened tickets: 34</p>
                     </div>
                 </div>
-                <button class="btn btn-light mt-5 ml-5" style="border: 1px solid #7634C4;">Register a new student</button>
+                <!-- <button class="btn btn-light mt-5 ml-5" style="border: 1px solid #7634C4;">Register a new student</button> -->
+                <a href="../Register_Student/register_student.php"><button class="btn btn-light mt-5 ml-5" style="border: 1px solid #7634C4;">Register a new student</button></a>
             </div>
         </div>
     </div>
