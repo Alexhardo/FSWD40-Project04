@@ -6,8 +6,8 @@
     <div  class="col-md-9 col-sm-12">
         <div class="container" id="adminCourses">
   <h2>Courses</h2>
-   <table class="table  table-hover">
-    <thead >
+   <table class="table table-hover">
+    <thead>
       <tr>
         <th>Course</th>
         <th>starts </th>
@@ -34,12 +34,21 @@
 </div>
     <!-- users -->
     <div class="row">
-    <div id="adminUsers" class="col-md-6 col-xs-12">
+    <div class="col-md-6 col-xs-12">
          <div class="container">
   <h2>Users</h2>
    <table class="table  table-hover">
-   
-    
+
+    <thead >
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody id="adminUsers">
+    </tbody>
+
   </table>
 </div>
     </div>
@@ -86,11 +95,8 @@
 <?php include "inc/footer.php" ?>
 <script>
     <?php echo "let courses = ". $coursesJson . ";\n";?>
-    <?php echo "let users = ". $usersJson . ";\n";?>
     <?php echo "let tickets = ". $ticketsJson . ";\n";?>
-    
-
-    
+    <?php echo "let users = ". $usersJson . ";\n";?>
 
 </script>
 <script src="../../js/admin_view.js"></script>
