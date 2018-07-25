@@ -6,8 +6,8 @@
     <div id="adminCourses" class="col-md-9 col-sm-12">
         <div class="container">
   <h2>Courses</h2>
-   <table class="table  table-hover">
-    <thead >
+   <table class="table table-hover">
+    <thead>
       <tr>
         <th>Firstname</th>
         <th>Lastname</th>
@@ -47,7 +47,7 @@
 </div>
     <!-- users -->
     <div class="row">
-    <div id="adminUsers" class="col-md-6 col-xs-12">
+    <div class="col-md-6 col-xs-12">
          <div class="container">
   <h2>Users</h2>
    <table class="table  table-hover">
@@ -58,22 +58,7 @@
         <th>Email</th>
       </tr>
     </thead>
-    <tbody>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
+    <tbody id="adminUsers">
     </tbody>
   </table>
 </div>
@@ -130,4 +115,9 @@
 </main>
 
 <?php include "inc/footer.php" ?>
-
+<script>
+    <?php echo "let courses = ". $coursesJson . ";\n";?>
+    <?php echo "let tickets = ". $ticketsJson . ";\n";?>
+    <?php echo "let users = ". $usersJson . ";\n";?>
+</script>
+<script src="../../js/admin_view.js"></script>

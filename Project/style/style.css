@@ -32,6 +32,7 @@
     opacity: 0.8; }
   .ticket-box .ticket-title {
     margin: 0;
+    max-width: 60%;
     padding: 18px;
     color: white; }
   .ticket-box button.expand-ticket {
@@ -172,7 +173,7 @@ main .container-fluid {
 .ticket-topic {
   position: absolute;
   top: 13px;
-  right: 27%;
+  left: 54%;
   border: 2px solid #4700ff;
   padding: 4px 30px;
   border-radius: 8px;
