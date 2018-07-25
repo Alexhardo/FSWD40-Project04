@@ -4,8 +4,7 @@
     padding: 0px;
     height: 100%;
     margin-bottom: 60px;
-    
-    .green-label{
+    .green-label {
         width: 57px;
         height: 10px;
         background-color: #1dce1d;
@@ -15,7 +14,7 @@
         border-radius: 5px 5px 0 0;
         left: 54px;
     }
-    .orange-label{
+    .orange-label {
         width: 57px;
         height: 10px;
         background-color: #ffc722;
@@ -37,6 +36,7 @@
         margin: 0;
         padding: 18px;
         color: white;
+        max-width: 48%;
     }
     position: relative;
     button.expand-ticket {
@@ -53,30 +53,30 @@
         font-size: 30px;
         right: 3%;
         transition: 0.3s;
-        
     }
     .panel {
         margin-left: 30px;
         background-color: #fff;
-        color:#000;
-        border-radius:0 0 9px 9px;
-        overflow:hidden;
-        opacity:0;
-        max-height:0;
-        transition:0.3s;
-        padding:0 8px;
-        margin:0;
+        color: #000;
+        border-radius: 0 0 9px 9px;
+        overflow: hidden;
+        opacity: 0;
+        max-height: 0;
+        transition: 0.3s;
+        padding: 0 8px;
+        margin: 0;
         p {
             padding: 5px;
         }
     }
-    div.panel.show{   
-            opacity:1 !important;
-            max-height:2200px !important;
-            padding:8px;
-            box-shadow: -1px 10px 52px -8px rgba(107,107,107,1);
+    div.panel.show {
+        opacity: 1 !important;
+        max-height: 2200px !important;
+        padding: 8px;
+        box-shadow: -1px 10px 52px -8px rgba(107, 107, 107, 1);
     }
 }
+
 .rotate-button {
     transform: rotate(180deg)!important;
 }

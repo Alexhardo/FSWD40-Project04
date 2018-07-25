@@ -3,33 +3,20 @@
 <main id="adminMAin" class=" container-fluid ">
     <!-- courses -->
     <div class="row">
-    <div id="adminCourses" class="col-md-9 col-sm-12">
-        <div class="container">
+    <div  class="col-md-9 col-sm-12">
+        <div class="container" id="adminCourses">
   <h2>Courses</h2>
    <table class="table  table-hover">
     <thead >
       <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
+        <th>Course</th>
+        <th>starts </th>
+        <th>End</th>
+       <!-- <th> description</th> -->
       </tr>
     </thead>
-    <tbody>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
+    <tbody id="Courses">
+     
     </tbody>
   </table>
 </div>
@@ -51,30 +38,8 @@
          <div class="container">
   <h2>Users</h2>
    <table class="table  table-hover">
-    <thead >
-      <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
-    </tbody>
+   
+    
   </table>
 </div>
     </div>
@@ -86,27 +51,16 @@
     <table class="table  table-hover">
     <thead >
       <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
+        <th>Course</th>
+        <th>Topic</th>
+        <th>Student</th>
+        <th>Teacher</th>
+        <th>status</th>
+        <th>Date asked</th>
       </tr>
     </thead>
-    <tbody>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
+    <tbody id="tickets">
+    
     </tbody>
   </table> 
   
@@ -130,4 +84,13 @@
 </main>
 
 <?php include "inc/footer.php" ?>
+<script>
+    <?php echo "let courses = ". $coursesJson . ";\n";?>
+    <?php echo "let users = ". $usersJson . ";\n";?>
+    <?php echo "let tickets = ". $ticketsJson . ";\n";?>
+    
 
+    
+
+</script>
+<script src="../../js/admin_view.js"></script>
