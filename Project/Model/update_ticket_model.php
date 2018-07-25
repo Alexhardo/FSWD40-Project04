@@ -14,11 +14,12 @@
    $result = queryDatabase($mysqli, $sql);
    if($ticketStatus=='closed'){queryDatabase($mysqli,$sql2);}
    if($result)
-    {echo 'ticket status updated';
-     echo " ".$sql2." ";
-     $host  = $_SERVER['HTTP_HOST'];
-     $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-     //header("Location: http://$host$uri/teacher_ticket_controller.php");
+    {
+    // echo 'ticket status updated';
+    //  echo " ".$sql2." ";
+    //  $host  = $_SERVER['HTTP_HOST'];
+    //  $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+     header("Location: ../Ticket_controller/teacher_ticket_controller.php");
     }
    else
     {echo 'error! ticket status could not be updated';}
