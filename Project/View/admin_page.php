@@ -29,6 +29,7 @@
         </div>
     </div>
 </div>
+    <a href="../Register_Student/add_user_controller.php"><button type="button">Add user</button></a>
     <!-- users -->
     <div class="row">
     <div class="col-md-6 col-xs-12">

@@ -13,10 +13,16 @@ if (!isset($_SESSION['user'])) {
 	header('Location: ../Ticket_controller/teacher_ticket_controller.php');
 	exit;
 }
-// @todo: Add redirect for students and teachers
 
-$error = false;
-$errorMsg = '';
+//Show success message after new user was added
+if (isset($_GET['success']) && $_GET['success'] == 1) {
+
+	$firstName = $_GET['firstName'];
+	$lastName = $_GET['lastName'];
+	$rights = $_GET['rights'];
+
+	echo "Added $firstName $lastName as a new $rights";
+}
 
 //Load model
 require_once('../../Model/admin_dashboard_model.php');
