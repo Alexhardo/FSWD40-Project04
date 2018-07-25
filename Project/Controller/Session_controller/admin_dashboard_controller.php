@@ -23,6 +23,7 @@ checkConnection(); //My function defined in model.php
 $coursesJson = getAllTableContent('courses');
 echo 'Courses:<br>';
 echo $coursesJson;
+var_dump($coursesJson);
 echo '<br><br>';
 
 $ticketsJson = getAllTableContent('tickets');

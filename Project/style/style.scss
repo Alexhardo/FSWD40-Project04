@@ -4,10 +4,8 @@
 @import 'partials/teachers_widget';
 @import 'partials/login';
 @import 'partials/footer';
-
-
 main {
-    .container-fluid{
+    .container-fluid {
         margin-bottom: 200px;
     }
 }
@@ -16,7 +14,7 @@ main {
     margin-top: 70px;
     font-weight: 200;
 }
-    
+
 #adminMAin {
     thead {
         background-color: #453184 !important;
@@ -37,13 +35,15 @@ main {
         text-align: center;
     }
 }
+
 .ticket-topic {
     position: absolute;
     top: 13px;
-    right: 27%;
+
+    left: 54%;
+
     border: 2px solid #4700ff;
     padding: 4px 30px;
     border-radius: 8px;
     background-color: #ffffff;
 }
-
