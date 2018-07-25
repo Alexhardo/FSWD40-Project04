@@ -63,8 +63,10 @@ if (isset($_POST['btn_login'])) { //If login button was pushed
 					header("Location: ../Ticket_controller/student_ticket_controller.php");	
 				} elseif (isset($_SESSION['rights']) && $_SESSION['rights'] == 'admin') {
 					header("Location: admin_dashboard_controller.php");
+				} elseif (isset($_SESSION['rights']) && $_SESSION['rights'] == 'teacher') {
+					header("Location: ../Ticket_controller/teacher_ticket_controller.php");
 				} else {
-					echo 'User is not a student and not an admin!';
+					echo 'User unknown';
 					var_dump($_SESSION['rights']);
 					die;
 				}
