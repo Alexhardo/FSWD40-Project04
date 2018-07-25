@@ -26,7 +26,7 @@ echo $coursesJson;
 var_dump($coursesJson);
 echo '<br><br>';
 
-$ticketsJson = getAllTableContent('tickets');
+$ticketsJson = getAllTickets();
 echo 'Tickets:<br>';
 echo $ticketsJson;
 echo '<br><br>';

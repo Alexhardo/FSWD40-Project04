@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0.1
+-- version 4.8.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Jul 25, 2018 at 09:31 AM
--- Server version: 10.1.32-MariaDB
--- PHP Version: 7.2.5
+-- Host: 127.0.0.1
+-- Generation Time: Jul 25, 2018 at 04:35 PM
+-- Server version: 10.1.33-MariaDB
+-- PHP Version: 7.2.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -41,9 +41,9 @@ CREATE TABLE `courses` (
 --
 
 INSERT INTO `courses` (`course_id`, `name`, `description`, `start_date`, `end_date`) VALUES
-(2, 'Front-End Course', 'In this track, you’ll learn how to build beautiful, interactive websites by learning the fundamentals of HTML, CSS, and JavaScript — three common coding languages on which all modern websites are built. This is a useful and lucrative skill to acquire as it is used by nearly every single business in the world that needs a website to communicate to its customers. By the end of this track, you’ll have all the skills required to build your own websites or even start a career with one of the thousands of companies that have a website.\r\n\r\n', '2018-08-05', '2018-09-28'),
+(2, 'Front-End Course', 'In this track, you will learn how to build beautiful, interactive websites by learning the fundamentals of HTML, CSS, and JavaScript - three common coding languages on which all modern websites are built. This is a useful and lucrative skill to acquire as it is used by nearly every single business in the world that needs a website to communicate to its customers. By the end of this track, you will have all the skills required to build your own websites or even start a career with one of the thousands of companies that have a website.\r\n\r\n', '2018-08-05', '2018-09-28'),
 (3, 'Back-End Course', 'This course presents an overview of a variety of Web backend topics: handling user input, producing templated output, storing information in databases and data stores, and building systems with secure user accounts.\r\n\r\n', '2018-08-13', '2018-09-10'),
-(4, 'Full Stack web development Course', 'In this program, you’ll prepare for a job as a Full Stack Web Developer, and learn to create websites, and complex server-side web applications that use powerful relational databases to persistently store data.\r\n\r\n', '2018-08-20', '2018-12-21');
+(4, 'Full Stack web development Course', 'In this program, you will prepare for a job as a Full Stack Web Developer, and learn to create websites, and complex server-side web applications that use powerful relational databases to persistently store data.\r\n\r\n', '2018-08-20', '2018-12-21');
 
 -- --------------------------------------------------------
 
