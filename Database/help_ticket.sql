@@ -2,8 +2,8 @@
 -- version 4.8.0.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jul 24, 2018 at 01:16 PM
+-- Host: localhost
+-- Generation Time: Jul 25, 2018 at 09:31 AM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -73,7 +73,7 @@ CREATE TABLE `tickets` (
   `fk_teacher_id` int(11) DEFAULT NULL,
   `open_date_time` datetime DEFAULT NULL,
   `close_date_time` datetime DEFAULT NULL,
-  `ticket_status` enum('open','closed') DEFAULT NULL
+  `ticket_status` enum('open','closed','taken') DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
