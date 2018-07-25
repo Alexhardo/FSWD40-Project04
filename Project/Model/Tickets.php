@@ -3,8 +3,15 @@
 
 
  function getTicketJson()
-   {$mysqli = openConnection ('localhost', 'root', '', 'help_ticket');   
-   $sql = "SELECT *,users.last_name,users.first_name from tickets inner join users on tickets.fk_student_id=users.user_id inner join topics on tickets.fk_topic_id = topics.topic_id";
+   {
+   $mysqli = openConnection ('localhost', 'root', '', 'help_ticket');   
+
+   $userid=$_SESSION['user'];
+   $sql2 = "SELECT * FROM `users` join link_users_courses on link_users_courses.fk_user_id = users.user_id join courses on courses.course_id = link_users_courses.fk_course_id where user_id='$userid'";
+   $result2 = mysqli_query($mysqli, $sql2);
+   $current_user = mysqli_fetch_array($result2, MYSQLI_ASSOC);
+   $user_cur = $current_user['course_id'];
+   $sql = "SELECT *,users.last_name,users.first_name from tickets inner join users on tickets.fk_student_id=users.user_id inner join topics on tickets.fk_topic_id = topics.topic_id where fk_course_id=$user_cur";
    $result = queryDatabase($mysqli, $sql);
 
    if($result)
@@ -25,6 +32,5 @@
     }
     return json_encode($json);
   }
-
   
 ?>  

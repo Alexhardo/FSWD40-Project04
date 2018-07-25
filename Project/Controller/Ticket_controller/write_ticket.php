@@ -17,8 +17,9 @@ session_start();
 
  $result = queryDatabase($mysqli, $sql);
 
- if(!$result)
-  {echo "wrong SQL statement";}
+ if($result) {
+  header("Location: student_ticket_controller.php");
+ }
 
 
 ?>

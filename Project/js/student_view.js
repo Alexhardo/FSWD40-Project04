@@ -4,6 +4,7 @@ let label_class = '';
 for (let i = 0; i < currentUser.length; i++) {
     $('.profile-widget-text:eq(0)').append(`
       <p>${currentUser[i].first_name} ${currentUser[i].last_name}</p>
+      <p>You are in a ${currentUser[i].name}</p>
       <p>Tickets asked: 13</p>
     `)
 
@@ -20,13 +21,15 @@ for (let i = 0; i < currentUser.length; i++) {
 for (let i = 0; i < tempData.length; i++) {
     
     if (tempData[i].ticket_status === "taken") {
+        let datestamp = Date.parse(tempData[i].open_date_time)
+        let date_ago = moment(datestamp).fromNow()
         label_class = "green-label"
         $(`.ticket-container:eq(${0})`).append(`
         <div class="row">
                 <div class="ticket-box col-lg-6 col-md-6 col-sm-9 col-9 offset-lg-3 offset-md-3">
                     
                     <div class="${label_class}"></div>
-                    <p class="ticket-date">Posted 45 minutes ago.</p>
+                    <p class="ticket-date">Posted ${date_ago}</p>
                     <p class="ticket-title"><strong>Title: </strong>${tempData[i].title}</p>
                     <p class="ticket-topic">${tempData[i].name}</p>
                     <button class="expand-ticket"><i class="fas fa-angle-double-down down"></i></button>
@@ -46,13 +49,15 @@ for (let i = 0; i < tempData.length; i++) {
 for (let i = 0; i < tempData.length; i++) {
     
     if (tempData[i].ticket_status === "open") {
+        let datestamp = Date.parse(tempData[i].open_date_time)
+        let date_ago = moment(datestamp).fromNow()
         label_class = "orange-label"
         $(`.ticket-container:eq(${0})`).append(`
         <div class="row">
                 <div class="ticket-box col-lg-6 col-md-6 col-sm-9 col-9 offset-lg-3 offset-md-3">
                     
                     <div class="${label_class}"></div>
-                    <p class="ticket-date">Posted 45 minutes ago.</p>
+                    <p class="ticket-date">Posted ${date_ago}</p>
                     <p class="ticket-title"><strong>Title: </strong>${tempData[i].title}</p>
                     <p class="ticket-topic">${tempData[i].name}</p>
                     <button class="expand-ticket"><i class="fas fa-angle-double-down down"></i></button>
