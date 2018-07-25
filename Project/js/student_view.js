@@ -6,6 +6,16 @@ for (let i = 0; i < currentUser.length; i++) {
       <p>${currentUser[i].first_name} ${currentUser[i].last_name}</p>
       <p>Tickets asked: 13</p>
     `)
+
+    $('#new-ticket').append(`
+        <form action="test_new_ticket_form.php" method="get">
+        <input type="hidden" name="user_id" value="${currentUser[i].user_id}">
+        <input type="hidden" name="course_name" value="${currentUser[i].name}">
+        <input type="hidden" name="course_id" value="${currentUser[i].course_id}">
+        <input type="hidden" name="fk_course_id" value="${currentUser[i].fk_course_id}">
+        <button type="submit" class="btn btn-warning offset-lg-3" style="border: 1px solid #7634C4;">Create a Ticket</button>
+        </form>
+    `)
   }
 for (let i = 0; i < tempData.length; i++) {
     
