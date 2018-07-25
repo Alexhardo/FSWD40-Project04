@@ -17,10 +17,10 @@ for (let i = 0; i < tickets.length; i++) {
     var solved = Math.abs(x - y);
     $(`#tickets:eq(${0})`).append(`
     <tr>
-        <td>${tickets[i].fk_course_id}</td>
-        <td>${tickets[i].fk_topic_id}</td>
-        <td>${tickets[i].fk_student_id}</td>
-        <td>${tickets[i].fk_teacher_id}</td> 
+        <td>${tickets[i].course_name}</td>
+        <td>${tickets[i].topic_name}</td>
+        <td>${tickets[i].student_name}</td>
+        <td>${tickets[i].teacher_name}</td> 
         <td>${tickets[i].ticket_status}</td> 
         <td>${x}</td>  
       </tr>

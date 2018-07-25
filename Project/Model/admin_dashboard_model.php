@@ -31,7 +31,7 @@ function getAllTableContent($table) {
 function getAllTickets() {
 	$mysqli = openConnection (DBHOST, DBUSER, DBPASS, DBNAME);
 
-	$sql = "SELECT ticket_id, fk_student_id, CONCAT(users.first_name, ' ', users.last_name) AS student_name, title, fk_topic_id, topics.name AS topic_name, fk_course_id, courses.name AS course_name, courses.description, fk_teacher_id, CONCAT(teachers.first_name, ' ', teachers.last_name), open_date_time, close_date_time, ticket_status
+	$sql = "SELECT ticket_id, fk_student_id, CONCAT(users.first_name, ' ', users.last_name) AS student_name, title, fk_topic_id, topics.name AS topic_name, fk_course_id, courses.name AS course_name, courses.description, fk_teacher_id, CONCAT(teachers.first_name, ' ', teachers.last_name) AS teacher_name, open_date_time, close_date_time, ticket_status
 					FROM tickets
 					INNER JOIN users
 						ON tickets.fk_student_id = users.user_id
