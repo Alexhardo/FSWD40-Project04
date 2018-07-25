@@ -10,9 +10,6 @@
                 <div class="profile-widget">
                     <div class="profile-widget-avatar"></div>
                     <div class="profile-widget-text">
-                        <p>Teacher X</p>
-                        <p>Number of students: 15</p>
-                        <p>Number of opened tickets: 34</p>
                     </div>
                 </div>
                 <!-- <button class="btn btn-light mt-5 ml-5" style="border: 1px solid #7634C4;">Register a new student</button> -->
@@ -24,5 +21,7 @@
 <?php include "inc/footer.php" ?>
 <script>
     <?php echo "let tempData = ". $tickets . ";\n";?>
+    <?php echo "let currentUser = ". $currentUser . ";\n";?>
 </script>
+<script src="../../js/moment.js"></script>
 <script src="../../js/teacher_view.js"></script>

@@ -1,12 +1,53 @@
+console.log(currentUser);
+console.log(tempData);
+function timeSince(date) {
+
+    var seconds = Math.floor((new Date() - date) / 1000);
+  
+    var interval = Math.floor(seconds / 31536000);
+  
+    if (interval > 1) {
+      return interval + " years";
+    }
+    interval = Math.floor(seconds / 2592000);
+    if (interval > 1) {
+      return interval + " months";
+    }
+    interval = Math.floor(seconds / 86400);
+    if (interval > 1) {
+      return interval + " days";
+    }
+    interval = Math.floor(seconds / 3600);
+    if (interval > 1) {
+      return interval + " hours";
+    }
+    interval = Math.floor(seconds / 60);
+    if (interval > 1) {
+      return interval + " minutes";
+    }
+    return Math.floor(seconds) + " seconds";
+  }
+//   var aDay = 24*60*60*1000
+//   console.log(timeSince(new Date(Date.now()-aDay)));
+//   console.log(timeSince(new Date(Date.now()-aDay*2)));
+
+for (let i = 0; i < currentUser.length; i++) {
+    $('.profile-widget-text:eq(0)').append(`
+      <p>${currentUser[i].first_name} ${currentUser[i].last_name}</p>
+      <p>You are a teacher in ${currentUser[i].name}</p>
+    `)}
+
 let label_class = '';
 for (let i = 0; i < tempData.length; i++) {
+    let datestamp = Date.parse(tempData[i].open_date_time)
+    let date_ago = moment(datestamp).fromNow()
     if (tempData[i].ticket_status === "taken") {
     label_class = "green-label"
     $(`.ticket-container:eq(${0})`).append(`
     <div class="row">
             <div class="ticket-box col-lg-6 col-md-6 col-sm-9 col-9 offset-lg-3 offset-md-3">
                 <div class="${label_class}"></div>
-                <p class="ticket-date">Posted 45 minutes ago.</p>
+                <p class="ticket-date">Posted ${date_ago}</p>
                 <p class="ticket-title"><strong>Title: </strong>${tempData[i].title}</p>
                 <p class="ticket-topic">${tempData[i].name}</p>
                 <button class="expand-ticket"><i class="fas fa-angle-double-down down"></i></button>
@@ -37,12 +78,14 @@ for (let i = 0; i < tempData.length; i++) {
 
 for (let i = 0; i < tempData.length; i++) {
     if (tempData[i].ticket_status === "open") {
+    let datestamp = Date.parse(tempData[i].open_date_time)
+    let date_ago = moment(datestamp).fromNow()
     label_class = "orange-label"
     $(`.ticket-container:eq(${0})`).append(`
     <div class="row">
             <div class="ticket-box col-lg-6 col-md-6 col-sm-9 col-9 offset-lg-3 offset-md-3">
                 <div class="${label_class}"></div>
-                <p class="ticket-date">Posted 45 minutes ago.</p>
+                <p class="ticket-date">Posted ${date_ago}</p>
                 <p class="ticket-title"><strong>Title: </strong>${tempData[i].title}</p>
                 <p class="ticket-topic">${tempData[i].name}</p>
                 <button class="expand-ticket"><i class="fas fa-angle-double-down down"></i></button>
@@ -78,3 +121,6 @@ accordions[i].onclick = function() {
     $(this).toggleClass("rotate-button");
 };
 }
+
+
+

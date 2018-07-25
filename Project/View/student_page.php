@@ -30,4 +30,5 @@
     <?php echo "let tempData = ". $tickets . ";\n";?>
     <?php echo "let currentUser = ". $currentUser . ";\n";?>
 </script>
+<script src="../../js/moment.js"></script>
 <script src="../../js/student_view.js"></script>
