@@ -1,5 +1,12 @@
 console.log(tempData);
+console.log(currentUser);
 let label_class = '';
+for (let i = 0; i < currentUser.length; i++) {
+    $('.profile-widget-text:eq(0)').append(`
+      <p>${currentUser[i].first_name} ${currentUser[i].last_name}</p>
+      <p>Tickets asked: 13</p>
+    `)
+  }
 for (let i = 0; i < tempData.length; i++) {
     
     if (tempData[i].ticket_status === "taken") {

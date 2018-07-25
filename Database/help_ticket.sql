@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.1
+-- version 4.8.0.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jul 25, 2018 at 04:35 PM
--- Server version: 10.1.33-MariaDB
--- PHP Version: 7.2.6
+-- Host: localhost
+-- Generation Time: Jul 25, 2018 at 06:47 PM
+-- Server version: 10.1.32-MariaDB
+-- PHP Version: 7.2.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -41,7 +41,7 @@ CREATE TABLE `courses` (
 --
 
 INSERT INTO `courses` (`course_id`, `name`, `description`, `start_date`, `end_date`) VALUES
-(2, 'Front-End Course', 'In this track, you will learn how to build beautiful, interactive websites by learning the fundamentals of HTML, CSS, and JavaScript - three common coding languages on which all modern websites are built. This is a useful and lucrative skill to acquire as it is used by nearly every single business in the world that needs a website to communicate to its customers. By the end of this track, you will have all the skills required to build your own websites or even start a career with one of the thousands of companies that have a website.\r\n\r\n', '2018-08-05', '2018-09-28'),
+(2, 'Front-End Course', 'lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum ', '2018-08-05', '2018-09-28'),
 (3, 'Back-End Course', 'This course presents an overview of a variety of Web backend topics: handling user input, producing templated output, storing information in databases and data stores, and building systems with secure user accounts.\r\n\r\n', '2018-08-13', '2018-09-10'),
 (4, 'Full Stack web development Course', 'In this program, you will prepare for a job as a Full Stack Web Developer, and learn to create websites, and complex server-side web applications that use powerful relational databases to persistently store data.\r\n\r\n', '2018-08-20', '2018-12-21');
 
@@ -56,6 +56,19 @@ CREATE TABLE `link_users_courses` (
   `fk_course_id` int(11) DEFAULT NULL,
   `fk_user_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `link_users_courses`
+--
+
+INSERT INTO `link_users_courses` (`link_id`, `fk_course_id`, `fk_user_id`) VALUES
+(1, 3, 2),
+(2, 2, 4),
+(3, 4, 5),
+(4, 3, 3),
+(5, 4, 6),
+(6, 2, 7),
+(7, 2, 8);
 
 -- --------------------------------------------------------
 
@@ -81,10 +94,10 @@ CREATE TABLE `tickets` (
 --
 
 INSERT INTO `tickets` (`ticket_id`, `fk_student_id`, `title`, `fk_topic_id`, `description`, `fk_course_id`, `fk_teacher_id`, `open_date_time`, `close_date_time`, `ticket_status`) VALUES
-(1, 2, 'what does CSS mean?', 3, 'CSS still not so clear to me', 2, 3, '2018-07-25 10:00:00', NULL, 'open'),
-(2, 4, 'method vs functions', 2, 'what is the difference between METHODS and FUNCTIONS ?', 4, 7, '2018-07-28 10:00:00', NULL, 'open'),
+(1, 2, 'what does CSS mean?', 3, 'CSS still not so clear to me', 2, 3, '2018-07-25 10:00:00', NULL, 'taken'),
+(2, 4, 'method vs functions', 2, 'what is the difference between METHODS and FUNCTIONS ?', 4, 7, '2018-07-28 10:00:00', '2018-07-25 16:38:33', 'closed'),
 (3, 5, 'model view controller', 5, 'i need some more details about model view controller!', 4, 3, '2018-07-31 13:00:00', NULL, 'open'),
-(4, 4, 'vcghxgh', 1, 'vbnxvn', 2, 7, '2018-07-25 10:00:00', NULL, NULL);
+(4, 4, 'vcghxgh', 1, 'vbnxvn', 2, 7, '2018-07-25 10:00:00', NULL, 'open');
 
 -- --------------------------------------------------------
 
@@ -193,7 +206,7 @@ ALTER TABLE `courses`
 -- AUTO_INCREMENT for table `link_users_courses`
 --
 ALTER TABLE `link_users_courses`
-  MODIFY `link_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `link_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `tickets`
@@ -211,7 +224,7 @@ ALTER TABLE `topics`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- Constraints for dumped tables
