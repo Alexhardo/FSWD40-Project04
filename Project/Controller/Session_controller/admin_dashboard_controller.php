@@ -20,21 +20,9 @@ require_once('../../Model/admin_dashboard_model.php');
 
 checkConnection(); //My function defined in model.php
 
-$coursesJson = getAllTableContent('courses');
-echo 'Courses:<br>';
-echo $coursesJson;
-var_dump($coursesJson);
-echo '<br><br>';
-
+$coursesJson = getAllTableContent('courses');;
 $ticketsJson = getAllTableContent('tickets');
-echo 'Tickets:<br>';
-echo $ticketsJson;
-echo '<br><br>';
-
 $usersJson = getAllTableContent('users');
-echo 'Users:<br>';
-echo $usersJson;
-echo '<br><br>';
 
 //Show page
 require_once('../../View/admin_page.php');
