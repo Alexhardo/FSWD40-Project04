@@ -10,7 +10,7 @@
     {$count = countRows($result);
      if($count>0)
       {$row = fetchAllRows($result);
-       echo json_encode($row);
+       return json_encode($row);
       }
      else
       {echo "error! data could not be retrieved";}

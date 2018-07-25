@@ -13,7 +13,9 @@
    echo $sql." \n ";
    $result = queryDatabase($mysqli, $sql);
    if($result)
-    {echo 'student has been registered ';}
+    {echo 'student has been registered ';
+      header("Location: ../Ticket_controller/teacher_ticket_controller.php");
+    }
    else
     {echo 'error! registering student failed';}
   }
