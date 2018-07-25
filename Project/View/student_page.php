@@ -6,6 +6,7 @@
         <div class="row">
             <div class="left-inner-container col-lg-9 col-md-9 col-sm-9">
                 <div class="ticket-container"></div>
+                <button class="btn btn-warning offset-lg-3" style="border: 1px solid #7634C4;">Create a Ticket</button>
             </div>
             <div class="right-inner-container col-lg-3 col-md-3">
                 <div class="profile-widget">
