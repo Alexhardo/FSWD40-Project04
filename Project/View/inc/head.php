@@ -1,5 +1,7 @@
-
-<?php require_once(__DIR__ . '\..\..\Config\mySQL_functions.php'); ?>
+<?php require_once('../../Config/mySQL_functions.php'); ?>
+<?php 
+// require_once(__DIR__ . '\..\..\Config\mySQL_functions.php'); 
+?>
 <!DOCTYPE html>
 
 <html lang="en">
