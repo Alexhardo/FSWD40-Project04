@@ -1,42 +1,16 @@
 console.log(currentUser);
 console.log(tempData);
-function timeSince(date) {
-
-    var seconds = Math.floor((new Date() - date) / 1000);
-  
-    var interval = Math.floor(seconds / 31536000);
-  
-    if (interval > 1) {
-      return interval + " years";
-    }
-    interval = Math.floor(seconds / 2592000);
-    if (interval > 1) {
-      return interval + " months";
-    }
-    interval = Math.floor(seconds / 86400);
-    if (interval > 1) {
-      return interval + " days";
-    }
-    interval = Math.floor(seconds / 3600);
-    if (interval > 1) {
-      return interval + " hours";
-    }
-    interval = Math.floor(seconds / 60);
-    if (interval > 1) {
-      return interval + " minutes";
-    }
-    return Math.floor(seconds) + " seconds";
-  }
-//   var aDay = 24*60*60*1000
-//   console.log(timeSince(new Date(Date.now()-aDay)));
-//   console.log(timeSince(new Date(Date.now()-aDay*2)));
-
 for (let i = 0; i < currentUser.length; i++) {
     $('.profile-widget-text:eq(0)').append(`
       <p>${currentUser[i].first_name} ${currentUser[i].last_name}</p>
       <p>You are a teacher in ${currentUser[i].name}</p>
-    `)}
-
+    `)
+    $('.profile-widget-avatar:eq(0)').html(`
+    <img style="width: 100%;border-radius: 50%;" src="../../images/avatars/${currentUser[i].img}">
+    `).css({
+        'background-color': 'transparent'
+    })
+    }
 let label_class = '';
 for (let i = 0; i < tempData.length; i++) {
     let datestamp = Date.parse(tempData[i].open_date_time)
@@ -68,7 +42,9 @@ for (let i = 0; i < tempData.length; i++) {
                 </div>
             </div>
             <div class="ticket-author col-lg-1 col-md-1 col-sm-1 col-1">
-                <div class="avatar text-center ml-auto mr-auto"></div>
+                <div class="avatar text-center ml-auto mr-auto">
+                <img style="width: 100%;border-radius: 50%;" src="../../images/avatars/${tempData[i].img}">
+                </div>
                 <p class="text-center">${tempData[i].student}</p>
             </div>
         </div>
@@ -106,7 +82,9 @@ for (let i = 0; i < tempData.length; i++) {
                 </div>
             </div>
             <div class="ticket-author col-lg-1 col-md-1 col-sm-1 col-1">
-                <div class="avatar text-center ml-auto mr-auto"></div>
+                <div class="avatar text-center ml-auto mr-auto">
+                <img style="width: 100%;border-radius: 50%;" src="../../images/avatars/${tempData[i].img}">
+                </div>
                 <p class="text-center">${tempData[i].student}</p>
             </div>
         </div>
