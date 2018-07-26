@@ -13,13 +13,31 @@
                 <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Topic</label>
                 </div>
+                
                 <select class="custom-select" id="inputGroupSelect01">
                     <option selected>Choose...</option>
-                    <option value="1">HTML</option>
-                    <option value="2">CSS</option>
-                    <option value="3">JavaScript</option>
+                    <?php
+                      require_once('../../Config/mySQL_functions.php');
+ 
+                      $mysqli = openConnection ('localhost', 'root', '', 'help_ticket');
+
+                      $sql="select * from topics"; 
+                      $result = queryDatabase($mysqli, $sql);
+
+
+
+                      if(!$result)
+                       {echo "// wrong SQL statement";}
+                      else
+                       {$row = fetchAllRows($result);
+                        //echo "var topicdata=".json_encode($row).";";
+                       }
+                      foreach($row as $op)
+                       {echo "<option value='".$op['topic_id']."' >".$op['name']."</option>";
+                       }       
+                     ?>
                 </select>
-                </div>
+                
                 <div class="form-group">
                     <label for="description">Description</label>
                     <textarea rows="10" cols="50" class="form-control" name="description"></textarea>
@@ -36,3 +54,4 @@
     </div>    
 </div>
 <?php include "../../View/inc/footer.php" ?>
+
