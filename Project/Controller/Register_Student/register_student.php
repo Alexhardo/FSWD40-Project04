@@ -1,21 +1,13 @@
-<!-- <h1>Register Student Form</h1>
-<form action="../Controller/Register_Student/registerstudent.php" method="get">
-<p><input placeholder="first name" type="text" name="first_name"></p>
-<p><input placeholder="last name" type="text" name="last_name"></p>
-<p><input placeholder="e-mail" type="text" name="email"></p>
-<p><input placeholder="password" type="text" name="pass"></p>
-<p><input name="rights" type="hidden" value="student"></p>
-<p><button type="submit">register</button></p>
-</form> -->
-
-
-
+<?php 
+ob_start();
+session_start();
+?>
 <?php include "../../View/inc/head.php" ?>
 <?php include '../../View/inc/navbar.php' ?>
 <div class="container">
     <div class="row">
         <div class="login-form col-lg-5">
-            <h1>Register a new User.</h1>
+            <h1>Register a new Student.</h1>
             <form action="registerstudent.php" method="get">
                 <div class="form-group">
                     <label for="first_name">First Name</label>
