@@ -1,4 +1,2 @@
->Create back-end for user pannel
-- Give all data for current user
-- Giva all data for all the teachers
-- Give all tickets for the current course
+>ToDo
+- fix login as new teacher
