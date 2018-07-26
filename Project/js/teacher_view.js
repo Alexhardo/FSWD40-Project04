@@ -1,6 +1,8 @@
 console.log(currentUser);
 console.log(tempData);
+let teacher_id = "";
 for (let i = 0; i < currentUser.length; i++) {
+    teacher_id=currentUser[i].user_id
     $('.profile-widget-text:eq(0)').append(`
       <p>${currentUser[i].first_name} ${currentUser[i].last_name}</p>
       <p>You are a teacher in ${currentUser[i].name}</p>
@@ -28,12 +30,13 @@ for (let i = 0; i < tempData.length; i++) {
                 <div class="panel">
                     <p><strong>Description: </strong><br>${tempData[i].description}</p>
                     <div class="row">
-                    <form action="../Update_Ticket/updateticket.php?" method="get" class="col-lg-3 offset-lg-5">
+                    <form action="../Update_Ticket/updateticket.php" method="get" class="col-lg-3 offset-lg-5">
                         <input type="hidden" name="ticketid" value="${tempData[i].ticket_id}">
                         <input type="hidden" name="status" value="taken">
+                        <input type="hidden" name="teacher_id" value="${teacher_id}">
                         <button type="submit" class="btn btn-warning">Take the ticket</button>
                     </form>
-                    <form action="../Update_Ticket/updateticket.php?" method="get" class="col-lg-3 ml-2">
+                    <form action="../Update_Ticket/updateticket.php" method="get" class="col-lg-3 ml-2">
                         <input type="hidden" name="ticketid" value="${tempData[i].ticket_id}">
                         <input type="hidden" name="status" value="closed">
                         <button type="submit" class="btn btn-success">Close the ticket</button>
@@ -53,6 +56,7 @@ for (let i = 0; i < tempData.length; i++) {
 }
 
 for (let i = 0; i < tempData.length; i++) {
+    console.log(teacher_id);
     if (tempData[i].ticket_status === "open") {
     let datestamp = Date.parse(tempData[i].open_date_time)
     let date_ago = moment(datestamp).fromNow()
@@ -68,12 +72,13 @@ for (let i = 0; i < tempData.length; i++) {
                 <div class="panel">
                     <p><strong>Description: </strong><br>${tempData[i].description}</p>
                     <div class="row">
-                    <form action="../Update_Ticket/updateticket.php?" method="get" class="col-lg-3 offset-lg-5">
+                    <form action="../Update_Ticket/updateticket.php" method="get" class="col-lg-3 offset-lg-5">
                         <input type="hidden" name="ticketid" value="${tempData[i].ticket_id}">
                         <input type="hidden" name="status" value="taken">
+                        <input type="hidden" name="teacher_id" value="${teacher_id}">
                         <button type="submit" class="btn btn-warning">Take the ticket</button>
                     </form>
-                    <form action="../Update_Ticket/updateticket.php?" method="get" class="col-lg-3 ml-2">
+                    <form action="../Update_Ticket/updateticket.php" method="get" class="col-lg-3 ml-2">
                         <input type="hidden" name="ticketid" value="${tempData[i].ticket_id}">
                         <input type="hidden" name="status" value="closed">
                         <button type="submit" class="btn btn-success">Close the ticket</button>
