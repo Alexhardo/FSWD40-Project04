@@ -24,15 +24,15 @@
                     <input type="password" class="form-control" name="pass" placeholder="password"> 
                 </div>
                 <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <label class="input-group-text" for="inputGroupSelect01">Select type</label>
-                </div>
-                <select class="custom-select" id="inputGroupSelect01" name="rights">
-                    <option selected>Choose...</option>
-                    <option value="admin">Admin</option>
-                    <option value="teacher">Teacher</option>
-                    <option value="student">Student</option>
-                </select>
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">Select type</label>
+                    </div>
+                    <select class="custom-select" id="inputGroupSelect01" name="rights">
+                        <option selected>Choose...</option>
+                        <option value="admin">Admin</option>
+                        <option value="teacher">Teacher</option>
+                        <option value="student">Student</option>
+                    </select>
                 </div>
                 <button type="submit" class="btn btn-light" name="btn_register_user">Register!</button>
             </form>

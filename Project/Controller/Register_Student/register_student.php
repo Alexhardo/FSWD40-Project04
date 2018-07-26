@@ -7,7 +7,20 @@
 <p><input name="rights" type="hidden" value="student"></p>
 <p><button type="submit">register</button></p>
 </form> -->
+<?php 
+/**
+ *controller to query database to get a list of courses
+ */
 
+ob_start();
+session_start();
+
+require_once('../../Model/register_student_model.php');
+
+$courses = getCourses();
+
+//var_dump($courses);
+?>
 
 
 <?php include "../../View/inc/head.php" ?>
@@ -15,7 +28,7 @@
 <div class="container">
     <div class="row">
         <div class="login-form col-lg-5">
-            <h1>Register a new User.</h1>
+            <h1>Register a new Student</h1>
             <form action="registerstudent.php" method="get">
                 <div class="form-group">
                     <label for="first_name">First Name</label>
@@ -32,6 +45,20 @@
                 <div class="form-group">
                     <label for="pass">Password</label>
                     <input type="password" class="form-control" name="pass" placeholder="password"> 
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">Select type</label>
+                    </div>
+                    <select class="custom-select" id="inputGroupSelect01" name="course">
+                        <option selected>Choose...</option>
+                        <?php foreach ($courses as $oneCourse) { ?>
+                            <option value="<?php echo $oneCourse['course_id']; ?>"><?php echo $oneCourse['name']; ?></option>    
+                        <?php } ?>
+                        <!-- <option value="admin">Admin</option>
+                        <option value="teacher">Teacher</option>
+                        <option value="student">Student</option> -->
+                    </select>
                 </div>
                 <p><input name="rights" type="hidden" value="student"></p>
                 <button type="submit" class="btn btn-light" name="btn_login">Register!</button>
