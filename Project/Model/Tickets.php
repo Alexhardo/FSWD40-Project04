@@ -27,7 +27,7 @@
     closeConnection($mysqli);
     $json=array();
     foreach($row as $data){
-    $element=(object)["student"=>$data['first_name']." ".$data['last_name'],"title"=>$data['title'],"description"=>$data['description'],"fk_student_id"=>$data['fk_student_id'],"ticket_id"=>$data['ticket_id'],"fk_topic_id"=>$data['fk_topic_id'],"fk_teacher_id"=>$data['fk_teacher_id'],"open_date_time"=>$data['open_date_time'],"close_date_time"=>$data['close_date_time'],"ticket_status"=>$data['ticket_status'],"name"=>$data['name']];
+    $element=(object)["student"=>$data['first_name']." ".$data['last_name'],"title"=>$data['title'],"description"=>$data['description'],"fk_student_id"=>$data['fk_student_id'],"ticket_id"=>$data['ticket_id'],"fk_topic_id"=>$data['fk_topic_id'],"fk_teacher_id"=>$data['fk_teacher_id'],"open_date_time"=>$data['open_date_time'],"close_date_time"=>$data['close_date_time'],"ticket_status"=>$data['ticket_status'],"name"=>$data['name'],"img"=>$data['img']];
      array_push($json,$element);
     }
     return json_encode($json);

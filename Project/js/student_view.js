@@ -8,6 +8,12 @@ for (let i = 0; i < currentUser.length; i++) {
       <p>Tickets asked: 13</p>
     `)
 
+    $('.profile-widget-avatar:eq(0)').html(`
+    <img style="width: 100%;border-radius: 50%;" src="../../images/avatars/${currentUser[i].img}">
+    `).css({
+        'background-color': 'transparent'
+    })
+
     $('#new-ticket').append(`
         <form action="test_new_ticket_form.php" method="get">
         <input type="hidden" name="user_id" value="${currentUser[i].user_id}">
@@ -19,7 +25,6 @@ for (let i = 0; i < currentUser.length; i++) {
     `)
   }
 for (let i = 0; i < tempData.length; i++) {
-    
     if (tempData[i].ticket_status === "taken") {
         let datestamp = Date.parse(tempData[i].open_date_time)
         let date_ago = moment(datestamp).fromNow()
@@ -38,11 +43,16 @@ for (let i = 0; i < tempData.length; i++) {
                     </div>
                 </div>
                 <div class="ticket-author col-lg-1 col-md-1 col-sm-1 col-1">
-                    <div class="avatar text-center ml-auto mr-auto"></div>
+                    <div class="avatar text-center ml-auto mr-auto">
+                        <img style="width: 100%;border-radius: 50%;" src="../../images/avatars/${tempData[i].img}">
+                    </div>
                     <p class="text-center">${tempData[i].student}</p>
                 </div>
             </div>
         `)
+        $(`.avatar`).css({
+            'background-color': 'transparent'
+        })
     } 
 }
 
@@ -66,11 +76,16 @@ for (let i = 0; i < tempData.length; i++) {
                     </div>
                 </div>
                 <div class="ticket-author col-lg-1 col-md-1 col-sm-1 col-1">
-                    <div class="avatar text-center ml-auto mr-auto"></div>
+                    <div class="avatar text-center ml-auto mr-auto">
+                    <img style="width: 100%;border-radius: 50%;" src="../../images/avatars/${tempData[i].img}">
+                    </div>
                     <p class="text-center">${tempData[i].student}</p>
                 </div>
             </div>
         `)
+        $(`.avatar`).css({
+            'background-color': 'transparent'
+        })
     } 
 }
 
