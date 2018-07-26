@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 26, 2018 at 10:44 AM
+-- Generation Time: Jul 26, 2018 at 10:46 AM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -70,8 +70,7 @@ INSERT INTO `link_users_courses` (`link_id`, `fk_course_id`, `fk_user_id`) VALUE
 (6, 2, 7),
 (7, 2, 8),
 (8, 4, 17),
-(9, 3, 18),
-(10, 2, 20);
+(9, 3, 18);
 
 -- --------------------------------------------------------
 
@@ -164,9 +163,7 @@ INSERT INTO `users` (`user_id`, `email`, `pass`, `last_name`, `first_name`, `rig
 (7, 'ghiath@learn.com', 'teacher123', 'ghiath', 'serri', 'teacher', 'serri.jpeg'),
 (8, 'theodora@learn.com', 'teacher123', 'theodora', 'patkos', 'teacher', 'theo.jpg'),
 (17, 'sameh@learn.at', 'student123', 'sameh', 'shahin', 'student', 'sameh.jpeg'),
-(18, 'ivan@learn.at', 'student123', 'ivan', 'zet', 'student', 'ivan.jpeg'),
-(20, 'asd@learn.at', 'pass', 'Almamedov', 'tim', 'teacher', NULL),
-(21, 'timur.almamedov@gmail.com', '0000', 'Kolyabina', 'Marina', 'student', NULL);
+(18, 'ivan@learn.at', 'student123', 'ivan', 'zet', 'student', 'ivan.jpeg');
 
 --
 -- Indexes for dumped tables
