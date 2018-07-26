@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 26, 2018 at 10:46 AM
+-- Generation Time: Jul 26, 2018 at 10:51 AM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -104,7 +104,8 @@ INSERT INTO `tickets` (`ticket_id`, `fk_student_id`, `title`, `fk_topic_id`, `de
 (6, 4, 'Software Testing\r\n', 10, 'i still fill that Software Testing is just wasting of time, can you contradict that please !', 4, 6, '2018-07-26 10:00:00', NULL, 'open'),
 (7, 5, 'Waterfall model', 9, 'is it correct that for small project the Waterfall model is more efficient than scrum method!', 4, 6, '2018-07-26 12:17:00', NULL, 'open'),
 (8, 2, 'Twig', 7, 'is the Twig file, kind of plain text files or a normal HTML document ?', 3, 3, '2018-07-26 13:12:00', NULL, 'open'),
-(9, 5, 'Symfony vs angular', 7, 'Symfony vs angular ', 4, 6, '2018-07-25 11:00:00', NULL, 'taken');
+(9, 5, 'Symfony vs angular', 7, 'Symfony vs angular ', 4, 6, '2018-07-25 11:00:00', NULL, 'taken'),
+(10, 4, 'NEW TICEKT 2', 2, 'adgdg', 2, NULL, '2018-07-26 10:50:19', NULL, 'open');
 
 -- --------------------------------------------------------
 
@@ -157,7 +158,7 @@ INSERT INTO `users` (`user_id`, `email`, `pass`, `last_name`, `first_name`, `rig
 (1, 'admin@learn.com', 'admin123', 'admin', 'admin', 'admin', 'admin.png'),
 (2, 'alex@learn.com', 'student123', 'alex', 'Hardo', 'student', 'alex.jpeg'),
 (3, 'goran@learn.com', 'teacher123', 'goran', 'stevic', 'teacher', 'goran.jpeg'),
-(4, 'tim@learn.com', 'student123', 'tim', 'almamedov', 'student', 'tim.jpeg'),
+(4, 'tim@learn.com', 'student123', 'tim', 'almamedov', 'student', 'tim.jpg'),
 (5, 'matthias@learn.com', 'student123', 'matthias', 'liszt', 'student', 'matthias.jpeg'),
 (6, 'zeljiko@learn.com', 'teacher123', 'zeljiko', 'puljic', 'teacher', 'zeljko.jpeg'),
 (7, 'ghiath@learn.com', 'teacher123', 'ghiath', 'serri', 'teacher', 'serri.jpeg'),
@@ -225,7 +226,7 @@ ALTER TABLE `link_users_courses`
 -- AUTO_INCREMENT for table `tickets`
 --
 ALTER TABLE `tickets`
-  MODIFY `ticket_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `ticket_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `topics`
