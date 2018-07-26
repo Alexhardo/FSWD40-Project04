@@ -48,10 +48,10 @@
                 
             </form>
         </div>
+    </div>    
         <div class="img col-lg-7 mt-5">
             <img src="../../images/vigi_02.png" alt="">
         </div>
-    </div>    
 </div>
 <?php include "../../View/inc/footer.php" ?>
 
