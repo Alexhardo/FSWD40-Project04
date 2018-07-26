@@ -1,3 +1,7 @@
+<?php 
+ob_start();
+session_start(); 
+?>
 <?php include "../../View/inc/head.php" ?>
 <?php include '../../View/inc/navbar.php' ?>
 <div class="container">
