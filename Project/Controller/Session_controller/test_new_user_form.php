@@ -1,8 +1,8 @@
 <?php include "../../View/inc/head.php" ?>
 <?php include '../../View/inc/navbar.php' ?>
 <!-- @todo: prettify back button -->
-<a href="../Session_controller/admin_dashboard_controller.php"><button type="button">Back to dashboard</button></a>
 <div class="container">
+<a href="../Session_controller/admin_dashboard_controller.php"><button class="mt-5 btn btn-light" type="button">Back to admin panel</button></a>
     <div class="row">
         <div class="login-form col-lg-5">
             <h1>Register a new User.</h1>

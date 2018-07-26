@@ -22,7 +22,6 @@ $courses = getCourses();
 //var_dump($courses);
 ?>
 
-
 <?php include "../../View/inc/head.php" ?>
 <?php include '../../View/inc/navbar.php' ?>
 <div class="container">

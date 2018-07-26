@@ -1,0 +1,84 @@
+<?php include "../../View/inc/head.php" ?>
+<?php include '../../View/inc/navbar.php' ?>
+<div class="container">
+    <div class="row">
+        <div class="login-form col-lg-5">
+            <h1>Create a new Ticket.</h1>
+            <form action="write_ticket.php" method="get">
+                <div class="form-group">
+                    <label for="email">Subject</label>
+                    <input type="text" class="form-control" name="title" placeholder="title">            
+                </div>
+                <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Topic</label>
+                </div>
+                
+                <select class="custom-select" id="updateTopics">
+                    <!--option selected>Choose...</option>
+                    <option value="1">HTML</option>
+                    <option value="2">CSS</option>
+                    <option value="3">JavaScript</option -->
+                </select>
+                
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea rows="10" cols="50" class="form-control" name="description"></textarea>
+                </div>
+                <button type="submit" class="btn btn-light" name="btn_login">Create a Ticket!</button>
+                <input type="hidden" name="user_id" value="<?php echo $_GET['user_id'] ?>">
+                <input type="hidden" name="course_id" value="<?php echo $_GET['course_id'] ?>">
+                
+            </form>
+        </div>
+        <div class="img col-lg-7 mt-5">
+            <img src="../../images/vigi_02.png" alt="">
+        </div>
+    </div>    
+</div>
+<script>
+  //alert('script executed');
+  /*
+  $.getJSON("getTopics.php",function(data){var mytopics=[];
+                                               
+                                                 data.map(function(x){var e=`<option value="${x.topic_id}">${x.name}</option>`;
+                                                                      mytopics.push(e);
+                                                                    });
+                                                 $("#inputGroupSelect01").html(mytopics.join(''));
+                                                 alert('topics altered');
+                                           });
+  */
+ <?php
+  require_once('../../Config/mySQL_functions.php');
+ 
+ $mysqli = openConnection ('localhost', 'root', '', 'help_ticket');
+
+ $sql="select * from topics"; 
+ $result = queryDatabase($mysqli, $sql);
+
+
+
+ if(!$result)
+  {echo "// wrong SQL statement";}
+ else
+  {$row = fetchAllRows($result);
+   echo "var topicdata=".json_encode($row).";";
+  }
+ ?>
+var mytopics=[];
+
+//alert("topicdata "+JSON.stringify(topicdata));
+
+//mytopics.push('<select class="custom-select" id="inputGroupSelect01">');                                               
+/*topicdata.map(function(x){var e=`<option value="${x.topic_id}">${x.name}</option>`;
+                                                                 mytopics.push(e);
+                                                                });*/
+//mytopics.push('</select>');
+//alert("html "+mytopics.join(''));
+//$("#inputGroupSelect01").html(mytopics.join(''));
+
+topicdata.map(function(x){$("#updateTopics").append($(<option>,{value: x.topic_id,text: x.name}));
+                         });
+</script>
+<?php include "../../View/inc/footer.php" ?>
+

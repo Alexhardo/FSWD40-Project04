@@ -4,6 +4,11 @@ for (let i = 0; i < current_User.length; i++) {
   $('.profile-widget-text:eq(0)').append(`
     <p>${current_User[i].first_name} ${current_User[i].last_name}</p>
   `)
+  $('.profile-widget-avatar:eq(0)').html(`
+    <img style="width: 100%;border-radius: 50%;" src="../../images/avatars/${current_User[i].img}">
+    `).css({
+        'background-color': 'transparent'
+    })
 }
 
 for (let i = 0; i < courses.length; i++) {
