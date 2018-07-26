@@ -29,7 +29,9 @@
         </div>
     </div>
 </div>
-    <a href="../Register_Student/add_user_controller.php"><button type="button">Add user</button></a>
+<div class="row">
+    <a class="col-lg-3 offset-lg-9" href="../Register_Student/add_user_controller.php"><button style="width:100%" class="btn btn-warning" type="button">Register a new User</button></a>
+    </div>   
     <!-- users -->
     <div class="row">
     <div class="col-md-6 col-xs-12">
